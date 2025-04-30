@@ -44,18 +44,19 @@ if (!isset($_SESSION['user_id'])) {
     }
 
     .nav-link:hover {
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    transition: 0.2s;
-}
+        background-color: #f8f9fa;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
 
-.nav-link.active {
-    background-color: #e9ecef;
-    border-left: 4px solid #0d6efd;
-    border-radius: 6px;
-}
+    .nav-link.active {
+        background-color: #e9ecef;
+        border-left: 4px solid #0d6efd;
+        border-radius: 6px;
+    }
 
   </style>
+  
 </head>
 <body>
 <div class="d-flex">
