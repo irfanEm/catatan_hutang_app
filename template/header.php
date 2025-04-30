@@ -1,4 +1,5 @@
 <?php include __DIR__ . '/../config/db.php';
+include __DIR__ . '/../config/url.php';
 session_start();
 
 // Cek apakah pengguna sudah login, jika tidak, arahkan ke halaman login
@@ -14,11 +15,14 @@ if (!isset($_SESSION['user_id'])) {
   <meta charset="UTF-8">
   <title>Aplikasi Hutang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../assets/bootstrap5.3.5/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/bootstrap5.3.5/icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/DataTables/datatables.min.css" rel="stylesheet">
-  <!-- <script src="../node_modules/chart.js/dist/chart.umd.js"></script> -->
-  <script src="../assets/chart.umd.js"></script>
+<!-- Bootstrap 5.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- DataTables -->
+<link href="https://cdn.jsdelivr.net/npm/datatables.net-bs5@1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #f8f9fa;
@@ -67,32 +71,32 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <ul class="nav flex-column p-3">
     <li class="nav-item mb-2">
-        <a href="/dashboard.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active fw-semibold' : '' ?>">
+        <a href="/catatan_hutang_app/dashboard.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-speedometer2"></i> Dashboard
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/agents/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/agents') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/catatan_hutang_app/agents/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/agents') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-person-lines-fill"></i> Agen
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/payment_methods/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/payment_methods') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/catatan_hutang_app/payment_methods/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/payment_methods') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-credit-card"></i> Metode Bayar
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/hutang/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/hutang') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/catatan_hutang_app/hutang/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/hutang') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-journal-text"></i> Hutang
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/users/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/users') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/catatan_hutang_app/users/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/users') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-person-circle"></i> Users
         </a>
     </li>
     <li class="nav-item mt-4">
-        <a href="/auth/logout.php" class="nav-link text-danger d-flex align-items-center gap-2">
+        <a href="/catatan_hutang_app/auth/logout.php" class="nav-link text-danger d-flex align-items-center gap-2">
             <i class="bi bi-box-arrow-right"></i> Logout
         </a>
     </li>

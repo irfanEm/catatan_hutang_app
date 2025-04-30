@@ -1,8 +1,16 @@
 </div> <!-- penutup container-fluid -->
 </div> <!-- penutup d-flex -->
-<script src="../assets/bootstrap5.3.5/css/bootstrap.min.css"></script>
-<script src="../assets/bootstrap5.3.5/js/bootstrap.min.js"></script>
-<script src="../assets/DataTables/datatables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery (wajib untuk DataTables) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+<!-- DataTables JS -->
+<script src="https://cdn.jsdelivr.net/npm/datatables.net@1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net-bs5@1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
 <script>
   const barCtx = document.getElementById('barChart').getContext('2d');
