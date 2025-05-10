@@ -71,32 +71,32 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <ul class="nav flex-column p-3">
     <li class="nav-item mb-2">
-        <a href="/catatan_hutang_app/dashboard.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active fw-semibold' : '' ?>">
+        <a href="/dashboard.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-speedometer2"></i> Dashboard
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/catatan_hutang_app/agents/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/agents') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/agents/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/agents') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-person-lines-fill"></i> Agen
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/catatan_hutang_app/payment_methods/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/payment_methods') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/payment_methods/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/payment_methods') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-credit-card"></i> Metode Bayar
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/catatan_hutang_app/hutang/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/hutang') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/hutang/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/hutang') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-journal-text"></i> Hutang
         </a>
     </li>
     <li class="nav-item mb-2">
-        <a href="/catatan_hutang_app/users/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/users') !== false ? 'active fw-semibold' : '' ?>">
+        <a href="/users/index.php" class="nav-link text-dark d-flex align-items-center gap-2 <?= strpos($_SERVER['REQUEST_URI'], '/users') !== false ? 'active fw-semibold' : '' ?>">
             <i class="bi bi-person-circle"></i> Users
         </a>
     </li>
     <li class="nav-item mt-4">
-        <a href="/catatan_hutang_app/auth/logout.php" class="nav-link text-danger d-flex align-items-center gap-2">
+        <a href="/auth/logout.php" class="nav-link text-danger d-flex align-items-center gap-2">
             <i class="bi bi-box-arrow-right"></i> Logout
         </a>
     </li>
